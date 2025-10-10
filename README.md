@@ -1,4 +1,4 @@
-# LLM Security Testing Framework
+# Genetic evolution in adversarial prompting: subverting and defending AI code review
 A framework for generating adversarial code samples to test Large Language Model security analysis capabilities, with a focus on identifying false negatives in vulnerability detection.
 
 # Overview
