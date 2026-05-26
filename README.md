@@ -20,10 +20,7 @@ This notebook implements a systematic approach to:
 - **OWASP Top 10 coverage** — targets common vulnerability classes including XXE, insecure deserialization, command injection, and improper input validation.
 - **The genetic algorithm can reward-hack** toward the least controlled constraint, producing barely-suspicious but non-vulnerable code that the critic correctly accepts. To guard against this, we validate whether the generated code is actually vulnerable using the Semgrep CLI (SAST).
 
-## Citation
+## Links
 
-This work was presented at Zenity's AI Agent Security Summit:
-
-> Delcourt, E. *Genetic evolution in adversarial code generation: subverting and defending AI code review.* Zenity AI Agent Security Summit.
-
-A companion paper, *Tournament-Style Genetic Evolution for Adversarial Code Generation in LLM Security Testing*, is included in this repository.
+- Presentation at Zenity's AI Agent Security Summit Sep'2025: [Genetic evolution in adversarial code generation: subverting and defending AI code review](https://www.youtube.com/watch?v=GvPjhy2VbSg)
+- A [companion paper is available](https://docs.google.com/document/d/1avr0N7K-GBqO9abwT7gCaj6djcH7VDyRtsr1Jx3oKOw/view).
