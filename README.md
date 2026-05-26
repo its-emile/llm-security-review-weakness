@@ -1,19 +1,29 @@
-# Genetic evolution in adversarial prompting: subverting and defending AI code review
-A framework for generating adversarial code samples to test Large Language Model security analysis capabilities, with a focus on identifying false negatives in vulnerability detection.
+# Genetic Evolution in Adversarial Prompting
 
-# Overview
+**Subverting and defending AI code review**
+
+A framework for generating adversarial code samples to evaluate the security analysis capabilities of Large Language Models (LLMs), with a focus on false negatives in vulnerability detection and genetically-optimized adversarial coding agents.
+
+## Overview
 
 This notebook implements a systematic approach to:
-* Generate Deliberately Vulnerable Code: Creates a dataset of code fragments containing security vulnerabilities paired with misleading comments that suggest safety
-* Test LLM Security Analysis: Evaluates how well language models identify these vulnerabilities despite deceptive developer comments
-* Evolutionary Optimization: Uses genetic algorithms to evolve prompt requirements that maximize false negative rates, simulating worst-case adversarial scenarios
 
-# Key Features
-* Adversarial Code Generation: Produces realistic vulnerable code with persuasive "safe" comments
-* Automated Security Testing: Tests LLM responses for false negatives in vulnerability detection
-* Genetic Algorithm Optimization: Evolves prompt combinations to find the most effective adversarial patterns
-* OWASP Top 10 Coverage: Focuses on common vulnerabilities including XXE, deserialization, command injection, etc.
+- **Generate deliberately vulnerable code** — produces code fragments containing security vulnerabilities paired with misleading indicators that suggest safety (such as comments).
+- **Test LLM security analysis** — evaluates how reliably language models identify these vulnerabilities despite deceptive code generation tactics.
+- **Evolve adversarial prompts** — applies genetic algorithms to evolve prompt requirements that maximize false negative rates, simulating worst-case adversarial scenarios.
 
-# Limitations & Continuing research
-* As indicated in the notebook, the evolution / genetic algorithm "reward hacks" towards the least controlled constraint, i.e. writes barely-suspicious, non-vulnerable code that the critic rightly accepts.
-* It is crucial to validate the actual vulnerabilities of the generated code through SAST inspection, so this prototype notebook will be improved using semgrep code CLI.  
+## Key Features
+
+- **Adversarial code generation** — realistic vulnerable code accompanied by persuasive "safe" comments.
+- **Automated security testing** — measures LLM false negative rates against the generated samples.
+- **Genetic algorithm optimization** — evolves prompt combinations to identify the most effective adversarial patterns.
+- **OWASP Top 10 coverage** — targets common vulnerability classes including XXE, insecure deserialization, command injection, and improper input validation.
+- **The genetic algorithm can reward-hack** toward the least controlled constraint, producing barely-suspicious but non-vulnerable code that the critic correctly accepts. To guard against this, we validate whether the generated code is actually vulnerable using the Semgrep CLI (SAST).
+
+## Citation
+
+This work was presented at Zenity's AI Agent Security Summit:
+
+> Delcourt, E. *Genetic evolution in adversarial code generation: subverting and defending AI code review.* Zenity AI Agent Security Summit.
+
+A companion paper, *Tournament-Style Genetic Evolution for Adversarial Code Generation in LLM Security Testing*, is included in this repository.
