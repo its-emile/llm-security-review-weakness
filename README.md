@@ -1,4 +1,4 @@
-# Genetic Evolution in Adversarial Prompting
+# Genetic Evolution in Adversarial Generative Code
 
 **Subverting and defending AI code review**
 
